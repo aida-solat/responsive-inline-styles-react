@@ -1,0 +1,435 @@
+/* @import url("https://fonts.googleapis.com/css?family=Montserrat:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i"); */
+
+/* http://cdn.eso.org/images/screen/alma-jfs-2010-10.jpg */
+/* * is a wildcard */
+/*
+  slide-left: https://res.cloudinary.com/jkeohan/image/upload/v1552337740/arrow_left_slim.png 
+  slide-right: https://res.cloudinary.com/jkeohan/image/upload/v1552337740/arrow_right_slim.png
+  arrow-down: https://res.cloudinary.com/jkeohan/image/upload/v1552338932/ui_sprite.png
+*/
+
+:root {
+  --red: rgb(84, 35, 26);
+}
+
+* {
+  /*   border: 1px solid white; */
+  box-sizing: border-box;
+  color: white;
+  font-family: Montserrat;
+}
+
+body {
+  margin: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body div.container {
+  width: 100%;
+  height: 100%;
+}
+
+div.container header {
+  /* background-image: url("https://res.cloudinary.com/jkeohan/image/upload/v1560709227/mars-landing_eh42f9.jpg"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100%;
+  /* transition: all 1s; */
+}
+
+div.container header .gradient_container_top {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), transparent);
+  height: 200px;
+  width: 100%;
+  position: absolute;
+}
+
+div.container header .gradient_container_bottom {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+div.container header .header-nav-area {
+  /*     background-color: var(--red); */
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.container header .header-nav-area #nav_container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+div.container header .brand_area {
+  background: url("https://mars.nasa.gov/assets/logo_nasa_trio@2x.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 49px;
+  width: 260px;
+  z-index: 100;
+}
+
+div.container header .brand_area .brand1 {
+  text-indent: -999px;
+  width: 22%;
+}
+
+div.container header .brand_area .brand2 {
+  text-indent: 999px;
+  width: 70%;
+  text-indent: -999px;
+}
+
+div.container header #navigation {
+  /* background-color: var(--red); */
+  /* align-items: center;
+  display: none;
+  text-align: right;
+  margin-right: 30px;
+  z-index: 100; */
+}
+
+/* div.container header #navigation {
+  display:none;
+} */
+
+div.container header form {
+  /* display: none; */
+}
+
+header form.meganav_search {
+  position: relative;
+}
+
+header form.meganav_search .search_submit {
+  padding: 0;
+  cursor: pointer;
+  width: 42px;
+  height: 40px;
+  background: url(https://mars.nasa.gov/assets/ui_sprite@2x.png) -131px -8px;
+  background-size: 300px;
+}
+
+header form.meganav_search .search_field {
+  background: rgba(255, 255, 255, 0.3);
+  border: 0;
+  width: 37px;
+  padding-right: 0;
+  padding-left: 0;
+  position: absolute;
+  height: 34px;
+}
+
+div.container header nav a {
+  font-size: 0.9em;
+  font-weight: 300;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+div.container header .menu-icon {
+  width: 25px;
+  height: 25px;
+  background: url(https://mars.nasa.gov/assets/ui_sprite@2x.png) 0 0;
+  background-size: 300px;
+  z-index: 100;
+}
+
+div.container header div.wrapper {
+  background: rgba(0, 0, 0, 0.4);
+  /*   margin-left: calc(90% - 530px); */
+  /*   margin-top: 250px; */
+  bottom: 30%;
+  /*   right:10%; */
+  /*     width: 530px; */
+  padding: 1.4em;
+  position: absolute;
+  /* height: 200px; */
+  width: 100%;
+  text-align: center;
+  /* transition: all 1s; */
+}
+
+header div.wrapper div.article h1 {
+  font-size: 1.7em;
+  font-weight: 300;
+  margin: 0 auto;
+  margin-bottom: 0.4em;
+  /* width: 70%; */
+  line-height: 1.5;
+}
+
+header div.wrapper div.article h1 a {
+  text-decoration: none;
+}
+
+header div.wrapper div.article h1 span {
+  background: url("https://mars.nasa.gov/assets/arrow_up_white_@2x.png") center
+    no-repeat;
+  position: absolute;
+  right: 0;
+  margin-top: -0.2em;
+  background-size: 12px;
+  height: 44px;
+  width: 44px;
+}
+
+header div.wrapper div.article h1 span.arrow.open {
+  transform: rotate(180deg);
+}
+
+header div.wrapper div.article div.description {
+  font-weight: 300;
+  font-size: 0.9em;
+  line-height: 1.8em;
+  height: 0%;
+  max-height: 0;
+  overflow: hidden;
+  /* transform: scaleY(0); */
+  transition: all 1.5s;
+  /*   padding:1.4em; */
+}
+
+header div.wrapper div.article div.description.open {
+  max-height: 300px;
+  /* transform: scaleY(1); */
+  /* transform-origin:top;  */
+  overflow: hidden;
+}
+
+header div.wrapper div.article h1 span {
+  font-style: italic;
+  font-weight: 600;
+}
+
+header div.wrapper div.article h3 {
+  font-weight: 300;
+  text-align: center;
+}
+
+header div.wrapper div.article footer {
+  margin: 1.6em 0 0;
+  display: none;
+}
+
+header div.wrapper div.article footer a {
+  background-color: rgb(74, 119, 137);
+  border-radius: 3px;
+  display: inline-block;
+  padding: 9px 16px;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+header div.wrapper div.article footer a.slide-two {
+  background: none;
+  color: #69b9ff;
+  border: none;
+  padding: 0;
+}
+
+div.container header div.wrapper.slide-two {
+  right: 55%;
+}
+
+/* header div.wrapper div.article.slide1 {
+  background-image: url("https://res.cloudinary.com/jkeohan/image/upload/v1551717380/mars-curiosity.jpg");
+  background-position: cent
+}
+
+header div.wrapper div.article.slide2 {
+  display:none;
+} */
+
+header .bullets-count {
+  bottom: 25%;
+  display: flex;
+  height: 8px;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+}
+
+header .bullets-count .bullet {
+  background: white;
+  border-radius: 50%;
+  height: 8px;
+  margin-right: 10px;
+  opacity: 0.5;
+  width: 8px;
+}
+
+header .bullets-count .bullet.bullet-selected {
+  opacity: 1;
+}
+
+header .bullets-count .bullet:hover {
+  cursor: pointer;
+}
+
+section.dashboard {
+  bottom: 35px;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+}
+
+section .image_and_description_container {
+  flex: 2;
+  margin-right: 10px;
+}
+
+section.dashboard .slide_container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 0 23px;
+}
+
+section.dashbaord .slick-slider {
+  margin: 0 auto;
+  width: calc(100% - 90px);
+}
+
+section.dashboard .slick-list {
+  display: flex;
+  padding: 10px 20px;
+  width: 100%;
+  /* border-left: 1px solid rgba(216,216,216,0.2);
+    border-right: 1px solid rgba(216,216,216,0.2); */
+}
+
+section.dashboard .slick-list .slide {
+  /* border-left: 1px solid rgba(216,216,216,0.2); */
+  opacity: 0;
+  min-width: 180px;
+}
+
+section.dashboard .slick-list .slick-track {
+  border-left: 1px solid rgba(216, 216, 216, 0.4);
+  border-right: 1px solid rgba(216, 216, 216, 0.4);
+  display: none;
+  flex: 1 0 230px;
+  justify-content: center;
+  padding: 20px 20%;
+}
+
+section.dashboard .slick-list .slick-track[index="2"] {
+  display: none;
+}
+
+section.dashboard .slick-list .slick-track {
+  padding: 20px 10%;
+}
+
+section.dashboard .slick-list .slick-track ~ .slick-track {
+  border-left: none;
+}
+
+section.dashboard .slick-list .slick-active {
+  display: flex;
+}
+
+section.dashboard .slick-list .slick-active .slide {
+  /* border-left: 1px solid rgba(216,216,216,0.2); */
+  opacity: 1;
+}
+
+section.dashboard .slick-prev,
+section.dashboard .slick-next {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  outline: none;
+  padding: 0;
+  width: 40px;
+}
+
+section.dashboard .slick-next {
+  background-image: url(https://mars.nasa.gov/assets/arrow_right_slim_dashboard.png);
+  background-repeat: no-repeat;
+  background-size: 27px 70px;
+  background-position: 7px 12px;
+  right: 0;
+  position: absolute;
+}
+
+section.dashboard .slick-prev {
+  background-image: url(https://mars.nasa.gov/assets/arrow_left_slim_dashboard.png);
+  background-repeat: no-repeat;
+  background-size: 27px 70px;
+  background-position: 7px 12px;
+  left: 0;
+  position: absolute;
+}
+
+section.dashboard .slide {
+  display: flex;
+  /* align-items: center; */
+}
+
+section.dashboard .slide .title {
+  font-size: 1.2em;
+  margin-bottom: 0;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  color: rgba(228, 228, 228, 0.8);
+  text-transform: uppercase;
+}
+
+section.dashboard .slide .value {
+  color: #4e8fa4;
+  font-size: 0.78em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+section.dashboard .circle_plus {
+  width: 37px;
+  height: 37px;
+  background: url(https://mars.nasa.gov/assets/dashboard_expand.png) no-repeat;
+  background-size: 100%;
+}
+
+section.more_bar {
+  align-items: center;
+  background-color: #4d91a6;
+  bottom: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  /* height: 36px; */
+  /* line-height: 36px; */
+  position: absolute;
+  /* text-align: center; */
+  width: 100%;
+}
+
+section.more_bar .title {
+  color: black !important;
+}
+
+section.more_bar .arrow_down {
+  background: url(https://res.cloudinary.com/jkeohan/image/upload/v1552338932/ui_sprite.png) -50px -125px;
+  background-size: 300px;
+  cursor: pointer;
+  display: inline-block;
+  height: 25px;
+  padding: 0;
+  width: 25px;
+  vertical-align: middle;
+}
